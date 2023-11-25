@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-baxB/HV16TkBHy6Dg8M79SCGlv6oLpCKC/Joa5H4SSz7r0ZF4RHJrh8p+9S3GrfoeOst9dyeGOpqiNIVBae1jA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Food and Drink List</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <h5 style="color: #ffffff;">Starbhak Mart</h5>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block sidebar">
+                <div id="sidebarContent" class="sidebar-sticky">
+                    <br>
+                    <ul class="list-group">
+                        <div class="dropdown">
+                            <select class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                style="margin-left: 25px;">
+                                <option hidden value="" style="text-align: center;">Pilih Jenis Pemesanan</option>
+                                <option value="Takeaway" style="text-align: center;">Take Away</option>
+                                <option value="Dine in" style="text-align: center;">Dine in</option>
+                            </select>
+                        </div>
+                    </ul>
+                    <br>
+                    <hr>
+                    <div>
+                        <h2 style="text-align: center;">Keranjang</h2>
+                        <ul id="cart-list" class="list-group">
+
+                        </ul>
+                    </div>
+
+                    <!-- untuk pesanan -->
+                    <hr>
+                    <div class="Jajan" id="section-to-print">
+                        <p>Discount : </p>
+                        <p id="" style="display: none;">Test</p>
+                        <p style="display: flex; justify-content: space-between;">Pajak : <span
+                                id="taxDiscount">0</span></p>
+                        <div class="bayar">
+                            <p style="display: flex; justify-content: space-between;">Total Harga : <span
+                                    id="totalAmount">0</span></p>
+                        </div>
+                        <button id="buyButton" type="button" class="btn btn-info"
+                            style="width: 200px; margin-left: 25px;">Buy</button>
+                    </div>
+                </nav>
+
+                <!-- Menu Pesanan -->
+
+                <!-- Row -->
+                <main role="main" class="col-md-10 px-4">
+                    <div class="content">
+                        <h2>Menu</h2>
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <img src="assets/Makanan/ayam geprek.jfif" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ayam Geprek</h5>
+                                        <p class="card-text">Rp.15.000</p>
+                                        <button class="btn btn-success">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <img src="assets/Makanan/kebab.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Kebab</h5>
+                                        <p class="card-text">Rp.15.000</p>
+                                        <button class="btn btn-success">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <img src="assets/Makanan/burger.jfif" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Burger</h5>
+                                        <p class="card-text">Rp.18.000</p>
+                                        <button class="btn btn-success">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <img src="assets/Makanan/spagetti.jfif" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Spagetti</h5>
+                                        <p class="card-text">Rp.11.000</p>
+                                        <button class="btn btn-success">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <img src="assets/Minuman/es jeruk.jfif" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Es Jeruk</h5>
+                                        <p class="card-text">Rp.5.000</p>
+                                        <button class="btn btn-success">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <img src="assets/Minuman/es teh.jfif" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Es Teh</h5>
+                                        <p class="card-text">Rp.3.000</p>
+                                        <button class="btn btn-success">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <img src="assets/Minuman/Es Campur.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Es Campur</h5>
+                                        <p class="card-text">Rp.8.000</p>
+                                        <button class="btn btn-success">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="card">
+                                    <img src="assets/Minuman/soda gembira.jpg" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Susu Soda</h5>
+                                        <p class="card-text">Rp.5000</p>
+                                        <button class="btn btn-success">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+
+        <!-- Sc -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="sc.js"></script>
+        <script src="search.js"></script>
+        <script src="short.js"></script>
+        <script src="buy.js"></script>
+    </body>
+
+    </html>
